@@ -94,6 +94,13 @@ h1, h2, h3 {
 .caption {
 	margin-top: 24px;
 }
+.caption ul {
+	list-style-image: url(../images/list.png);
+}
+.caption ul li {
+	line-height: 1.5;
+}
+
 
 /*
  * List Group
