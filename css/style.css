@@ -1,5 +1,10 @@
 body {
+	font-family: Georgia, serif;
 	background-color: #eee;
+}
+
+h1, h2, h3 {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-header {
@@ -21,6 +26,7 @@ body {
  * Nav Buttons
  */
 .btn-default {
+	font-family: Arial, Helvetica, sans-serif;
 	color: #fff;
 	border-color: rgba(68, 79, 89, 0.6);
 	text-transform: uppercase;
@@ -45,7 +51,11 @@ body {
 }
 
 #content.row {
-	margin-top: 0px;
+	margin-top: 0;
+}
+
+.caption {
+	margin-top: 24px;
 }
 
 /*
