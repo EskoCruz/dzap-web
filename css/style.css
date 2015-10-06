@@ -1,16 +1,19 @@
 body {
 	font-family: Georgia, serif;
+	color: #4a4a4a;
 	background-color: #eee;
 }
 
 h1, h2, h3 {
 	font-family: Arial, Helvetica, sans-serif;
+	color: #3f3f3f;
 }
 
-.navbar-header {
+.navbar-header, footer {
 	min-height: 80px;
 }
-.navbar-default {
+.navbar-default, footer {
+	font-family: Arial, Helvetica, sans-serif;
 	background-color: #cccccc;
 	border-color: #808080;
 }
@@ -25,15 +28,24 @@ h1, h2, h3 {
 /*
  * Nav Buttons
  */
-.btn-default {
-	font-family: Arial, Helvetica, sans-serif;
+.btn-default, .btn-default:hover {
 	color: #fff;
 	border-color: rgba(68, 79, 89, 0.6);
 	text-transform: uppercase;
+	background-color: #20b4f2;
 	background: -webkit-linear-gradient(#99dbf7, #20b4f2);
 	background: -o-linear-gradient(#99dbf7, #20b4f2);
 	background: -moz-linear-gradient(#99dbf7, #20b4f2);
 	background: linear-gradient(#99dbf7, #20b4f2);
+}
+.btn-default:hover {
+	background: -webkit-linear-gradient(#20b4f2, #99dbf7);
+	background: -o-linear-gradient(#20b4f2, #99dbf7);
+	background: -moz-linear-gradient(#20b4f2, #99dbf7);
+	background: linear-gradient(#20b4f2, #99dbf7);
+}
+.btn-default:active, .btn-default:focus {
+	outline: none;
 }
 
 .img-thumbnail {
@@ -67,6 +79,9 @@ h1, h2, h3 {
 	-moz-animation: slideshow-fade 30s linear infinite;
 	animation: slideshow-fade 30s linear infinite;
 }
+/*.slideshow .slide.active {*/
+	/*opacity: 1;*/
+/*}*/
 
 .slideshow .slide:nth-child(2) {
 	animation-delay: 10s;
@@ -126,6 +141,27 @@ h1, h2, h3 {
 }
 
 
+/*
+ * Footer
+*/
+footer, .text-muted {
+	margin-top: 30px;
+	color: #4a4a4a;
+}
+footer .nav>li>a {
+	color: #4a4a4a;
+	padding: 0 15px;
+	border-right: 1px solid #4a4a4a;
+
+}
+footer .nav>li:last-child>a {
+	border-right: none;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+	text-decoration: none;
+	background-color: transparent;
+	outline: none;
+}
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
@@ -167,7 +203,7 @@ h1, h2, h3 {
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) {  }
+@media (min-width: 1200px) {  }
 
 
 
