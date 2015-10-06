@@ -31,7 +31,9 @@ h1, h2, h3 {
 .navbar-brand img {
 	max-height: 50px;
 }
-
+.navbar-toggle {
+	margin-top: 20px;
+}
 
 
 /*
