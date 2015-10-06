@@ -4,10 +4,12 @@
 (function () {
 
 	// compile our template
-	var template = Handlebars.compile($("#index-template").html());
+	var template = Handlebars.compile($("#comments-template").html());
 
 	// add the list helper
 	Handlebars.registerHelper('list', function(context, options) {
+		//var contextSort = context.concat()
+			//.sort( function(a,b) { return a.timestamp - b.timestamp } );
 		var ret = "<ul class='list-group'>";
 		for(var i=0, j=context.length; i<j; i++) {
 			ret = ret + "<li class='list-group-item'>" + options.fn(context[i]) + "</li>";
@@ -38,8 +40,5 @@
 	};
 
 	$('#comments').html(template(data));
-
-
-
 
 })();
