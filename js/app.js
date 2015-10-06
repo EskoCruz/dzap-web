@@ -20,7 +20,7 @@
 	//  format an date with Moment.js
 	Handlebars.registerHelper('dateFormat', function(context, block) {
 		if (window.moment) {
-			var f = block.hash.format || "M/d/YYYY";
+			var f = block.hash.format || "M/D/YYYY";
 			return moment(new Date(context)).format(f);
 		}else{
 			return context;   //  return data as is.
