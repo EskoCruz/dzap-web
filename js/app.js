@@ -8,11 +8,11 @@
 
 	// add the list helper
 	Handlebars.registerHelper('list', function(context, options) {
-		var contextSort = context.concat()
-			.sort( function(a,b) { return a.timestamp - b.timestamp } );
+		var contextSortDesc = context.concat()
+			.sort( function(a,b) { return b.timestamp - a.timestamp } );
 		var ret = "<ul class='list-group'>";
-		for(var i=0, j=contextSort.length; i<j; i++) {
-			ret = ret + "<li class='list-group-item'>" + options.fn(contextSort[i]) + "</li>";
+		for(var i=0, j=contextSortDesc.length; i<j; i++) {
+			ret = ret + "<li class='list-group-item'>" + options.fn(contextSortDesc[i]) + "</li>";
 		}
 		return ret + "</ul>";
 	});

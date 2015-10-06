@@ -95,10 +95,14 @@ h1, h2, h3 {
 	animation-delay: 20s;
 }
 
-/*@-webkit-keyframes slideshow-fade {*/
-	/*0%, 80%, 100% { opacity: 0; }*/
-	/*5%, 5% { opacity: 1;}*/
-/*}*/
+@-webkit-keyframes slideshow-fade {
+	0%, 52.5%, 100% { opacity: 0; }
+	4%, 48.5% { opacity: 1;}
+}
+@-moz-keyframes slideshow-fade {
+	0%, 52.5%, 100% { opacity: 0; }
+	4%, 48.5% { opacity: 1;}
+}
 @keyframes slideshow-fade {
 	0%, 52.5%, 100% { opacity: 0; }
 	4%, 48.5% { opacity: 1;}
