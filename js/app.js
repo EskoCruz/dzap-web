@@ -8,11 +8,11 @@
 
 	// add the list helper
 	Handlebars.registerHelper('list', function(context, options) {
-		//var contextSort = context.concat()
-			//.sort( function(a,b) { return a.timestamp - b.timestamp } );
+		var contextSort = context.concat()
+			.sort( function(a,b) { return a.timestamp - b.timestamp } );
 		var ret = "<ul class='list-group'>";
-		for(var i=0, j=context.length; i<j; i++) {
-			ret = ret + "<li class='list-group-item'>" + options.fn(context[i]) + "</li>";
+		for(var i=0, j=contextSort.length; i<j; i++) {
+			ret = ret + "<li class='list-group-item'>" + options.fn(contextSort[i]) + "</li>";
 		}
 		return ret + "</ul>";
 	});
@@ -21,7 +21,7 @@
 	Handlebars.registerHelper('dateFormat', function(context, block) {
 		if (window.moment) {
 			var f = block.hash.format || "M/d/YYYY";
-			return moment(Date(context)).format(f);
+			return moment(new Date(context)).format(f);
 		}else{
 			return context;   //  return data as is.
 		}
